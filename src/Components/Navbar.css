@@ -1,0 +1,44 @@
+/* Navbar.css */
+.navbar {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #8F12FD;
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+.navbar.scrolled {
+  background-color: #8F12FD; /* Change the background color when scrolled if needed */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffc107; /* Change the color on hover or when the link is active */
+}

@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    background-color: #a863e4;
+    color: #FFF;
+    gap: 10px;
+    flex-direction: column;
+    padding: 10px 10px;
+    box-shadow: 0 3px 5px 0 rgba(36, 50, 66, 0.2);
+  }
+.header:hover {
+    box-shadow: 0 20px 30px 0 rgba(36, 50, 66, 0.14);
+  }

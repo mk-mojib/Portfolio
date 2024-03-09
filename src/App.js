@@ -12,6 +12,7 @@ import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import Education from './Components/Education';
 import Skills from './Components/Skills';
+import Achivements from "./Components/Achivements"
 
 library.add(fab, fas, far);
 
@@ -23,6 +24,7 @@ function App() {
       <Skills />
       <Education />
       <Projects />
+      <Achivements />
       <Contact />
       <Footer />
 

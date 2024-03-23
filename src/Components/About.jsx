@@ -1,21 +1,59 @@
-import React from 'react';
-// import table from "./Assets2/menwithtable.png"
-const About = () => {
+import React from "react";
+import "./About.css";
+import laptopImg from "./Assets/mojib_portfolio.png";
+import { ImPointRight } from "react-icons/im";
+
+function About() {
   return (
-    <section id="about">
-      <h2>About Me</h2>
-      <div className="abaut-me">
-        <div className="about-img">
-            {/* <img src={table} alt='tablewithboy' /> */}
+    <div>
+    <section className="about">
+      <div className="about-content">
+        <div className="about-me">
+        <div className="about-text">
+            <h1 className="about-heading">
+                Know Who <strong>I'M</strong>
+            </h1>
+            <br />
+            <br />
+            <br />
+            <p style={{ textAlign: "justify" }}>
+                Hi Everyone, I am <span className="purple">Md Khalid Mojib </span>
+                from <span className="purple"> Bihar, India.</span>
+            <br />
+                Aspiring software engineer seeking an Internship
+            <br />
+                I am pursuing B - Tech (FY) in Computer Science from RGPV MP.
+            <br />
+            <br />
+                 Apart from coding, some other activities that I love to do!
+            </p>
+            <br />
+            <br />
+
+            <ul>
+                <li className="about-activity">
+                <ImPointRight /> Listening to Music
+                </li> <br />
+                <li className="about-activity">
+                <ImPointRight /> Reading Poetry
+                </li> <br />
+                <li className="about-activity">
+                <ImPointRight /> Watching Cricket
+                </li> <br />
+            </ul>
+
+            <p className="p" style={{ color: "rgb(155 126 172)" }}>
+                "Strive to build things that make a difference!" <br /> <b>__{"Mojib"}</b>
+            </p>
         </div>
-        <div className='about-p'>
-          <p>
-            🚀 As an enthusiastic and dedicated front-end developer in pursuit of an internship opportunity, I bring a solid foundation in HTML, CSS, JavaScript and ReactJS coupled with a passion for creating visually appealing and user-friendly web interfaces. Currently pursuing B-Tech In Computer Science [Final Year] at Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal - MP., I have honed my skills through academic projects, emphasizing responsive design and collaborative problem-solving. Eager to contribute my creativity and technical expertise to real-world projects, I am open to opportunities that allow me to further develop my skills and make meaningful contributions to innovative web development initiatives. Let's connect and explore how my passion for front-end development can contribute to your team's success! 🔧💻 #FrontEndDeveloper #WebDevelopment #InternshipSeeker #JobSeeker
-          </p>
+        </div>
+        <div className="about-image">
+          <img src={laptopImg} alt="about" className="img-fluid" />
         </div>
       </div>
     </section>
+    </div>
   );
-};
+}
 
 export default About;

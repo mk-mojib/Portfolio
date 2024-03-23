@@ -1,55 +1,76 @@
-// Navbar.js
 import React, { useState, useEffect } from 'react';
-import "./Navbar.css";
-import { Link as RouterLink } from 'react-router-dom';
-import { Link as ScrollLink, Events, scrollSpy } from 'react-scroll';
+import "./Navbar.css"
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState('home');
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isTransparent, setIsTransparent] = useState(true);
+    const [menu, setMenu] = useState("home");
 
-  const handleScroll = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop - 80,
-        behavior: 'smooth',
-      });
-    }
-  };
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
 
   useEffect(() => {
-    // Add scroll event listener to update activeLink on scroll
-    Events.scrollEvent.register('begin', (to) => {
-      setActiveLink(to);
-    });
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 50) {
+        setIsTransparent(false);
+      } else {
+        setIsTransparent(true);
+      }
+    };
 
-    // Set up scrollSpy to detect scroll events for each section
-    scrollSpy.update();
+    window.addEventListener('scroll', handleScroll);
 
-    // Remove event listeners when the component is unmounted
     return () => {
-      Events.scrollEvent.remove('begin');
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <nav id="navbar" className="navbar">
-      <h2 className='name'>MKM</h2>
-      <ul className="nav-list">
-        <li>
-          <RouterLink to="/">
-            <span className={`nav-link ${activeLink === 'home' ? 'active' : ''}`}>Home</span>
-          </RouterLink>
-        </li>
-        <li>
-          <ScrollLink to="about" spy={true} smooth={true} duration={500} className={`nav-link ${activeLink === 'about' ? 'active' : ''}`} onClick={() => handleScroll("about")}>
-            About
-          </ScrollLink>
-        </li>
-        {/* Add more navigation links for other sections */}
-      </ul>
-    </nav>
-  );
-};
+    <div className={`nav-container ${isTransparent ? 'transparent' : ''}`}>    
+        <nav className='navbar'>
+            <div className="logo">Md Khalid Mojib</div>
+            <div className={`nav-links ${isMenuOpen ? 'show' : ''}`}>
+                <ul className='nav-links'>
+                    <li onClick={() => {setMenu("home")}}><Link to="/">Home</Link></li>
+                    <li onClick={() => {setMenu("about")}}><Link to="/about">About</Link></li>
+                    <li onClick={() => {setMenu("education")}}><Link to="/education">Education</Link></li>
+                    <li onClick={() => {setMenu("skills")}}><Link to="/skills">Skills</Link></li>
+                    <li onClick={() => {setMenu("projects")}}><Link to="/projects">Projects</Link></li>
+                    <li onClick={() => {setMenu("contacts")}}><Link to="/contacts">Contacts</Link></li>
+                </ul>
+            </div>
+        </nav>
+        <nav className="hamburger-nav">
+            <div className="logo">Md Khalid Mojib</div>
+            <div className="hamburger-menu">
+            <div className='menu'>MENU &nbsp;&nbsp;
+            <div className={`hamburger-icon ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
+            </div>
+                <div className={`menu-links ${isMenuOpen ? 'open' : ''}`} >
+                    <ul>
+                        <li onClick={() => {setMenu("home"), toggleMenu}}><Link to="/">Home</Link></li>
+                        <li onClick={() => {setMenu("about"),toggleMenu}}><Link to="/about">About</Link></li>
+                        <li onClick={() => {setMenu("education"),toggleMenu}}><Link to="/education">Education</Link></li>
+                        <li onClick={() => {setMenu("skills"),toggleMenu}}><Link to="/skills">Skills</Link></li>
+                        <li onClick={() => {setMenu("projects"),toggleMenu}}><Link to="/projects">Projects</Link></li>
+                        <li onClick={() => {setMenu("contacts"),toggleMenu}}><Link to="/contacts">Contacts</Link></li>
+                    </ul>    
+                </div>
+            </div>
+        </nav>
+    </div>
+  )
+}
 
-export default Navbar;
+export default Navbar
+
+
+

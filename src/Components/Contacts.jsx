@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+import "./Contacts.css"
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,7 +28,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className='last-section'>
-      <h2>Contact Me</h2>
+      <h2>Contact <b>Me</b></h2>
       <p>Feel free to reach out!</p>
       <form>
         <label htmlFor="name">Name:</label>

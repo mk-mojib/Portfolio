@@ -1,0 +1,31 @@
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    background-color: #a863e4;
+    color: #fff;
+  }
+  .last-section {
+    margin-bottom: 20px;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons a {
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 10%;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff;
+    background-color: #fff;
+  }
+  

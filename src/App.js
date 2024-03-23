@@ -1,36 +1,44 @@
-
-import React from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
-import "./App.css"
-import Header from './Components/Header';
-import About from './Components/About';
-import Projects from './Components/Projects';
-import Contact from './Components/Contact';
+import React, { useState, useEffect } from "react";
+import Preloader from "./Components/Pre";
+import Navbar from './Components/Navbar';
+import Home from "./Components/Home"
+import About from "./Components/About"
+import Education from "./Components/Education"
+import Skills from "./Components/Skills"
+import Projects from "./Components/Projects"
+import Contacts from "./Components/Contacts"
 import Footer from './Components/Footer';
-import Education from './Components/Education';
-import Skills from './Components/Skills';
-import Achivements from "./Components/Achivements"
-
-library.add(fab, fas, far);
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  return (
-    <div>
-      <Header />
-      <About />
-      <Skills />
-      <Education />
-      <Projects />
-      <Achivements />
-      <Contact />
-      <Footer />
+  const [load, upadateLoad] = useState(true);
 
-    </div>
-  );
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      upadateLoad(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
+  return (
+    <>
+      <BrowserRouter>
+      <Preloader load={load} />
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
+      <Navbar />
+      <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/education' element={<Education />} />
+          <Route path='/skills' element={<Skills />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/contacts' element={<Contacts />} />
+      </Routes>
+      <Footer />
+      </div>
+      </BrowserRouter>
+    </>
+  )
 }
 
-export default App;
-
+export default App

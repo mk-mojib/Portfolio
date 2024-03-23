@@ -1,0 +1,236 @@
+/* Home */
+
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+}
+
+.pic-container img {
+    margin-left: 40%;
+    width: 200%; 
+    height: auto; 
+    transition: transform 0.5s ease-in-out;
+}
+
+.pic-container img:hover {
+    transform: perspective(1000px) rotateY(20deg);
+}
+
+.intro h1 {
+    font-size: 3rem;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wave {
+  display: inline-block;
+  animation: shake 0.8s infinite;
+}
+
+.intro .main-name {
+    color: #8a2be2;
+}
+.intro .designation {
+    font-size: 3rem;
+    color: #8a2be2;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.intro {
+    margin-left: 30%;
+} 
+
+.btns-container {
+    display: flex;
+    gap: 5%;
+    margin-left: 10%;
+}
+
+.btns-container .btns {
+    width: 100px;
+}
+
+.btns-container button {
+    width: 150px;
+    border-radius: 20px;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 600px) and (min-width: 370px) {
+    .profile {
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px;
+        height: 90vh;
+        margin-bottom: 50px;
+    }
+    .profile .pic-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile .pic-container img{
+        width: 300px;
+        height: 300px;
+        margin-left: 0;
+        margin-bottom: 40px;
+    }
+    .profile .intro {
+        margin: 0;
+    }
+    .profile .intro h1 {
+        font-size: 1.5rem;
+        text-align: start;
+        padding-bottom: 10px;
+    }
+    .intro .designation {
+        font-size: 1.5rem;
+        width: 100%;
+        margin-top: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .btns-container {
+        padding: 10px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .btns-container button {
+        width: 160px;
+    }
+}
+
+@media only screen and (max-width: 800px) and (min-width: 601px) {
+    .profile {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px;
+        height: 100vh;
+    }
+    .profile .pic-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .profile .pic-container img{
+        width: 400px;
+        height: 400px;
+        padding: 0;
+        margin-left: 0;
+
+    }
+    .profile .intro {
+        margin: 0;
+    }
+    .profile .intro h1 {
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .intro .designation {
+        padding: 10px;
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .btns-container {
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .btns-container button {
+        width: 220px;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 801px) {
+    .profile {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px;
+        height: 100vh;
+    }
+    .profile .pic-container img{
+        width: 400px;
+        height: 400px;
+        padding: 0;
+        margin-left: 0;
+        margin-bottom: 50px;
+
+    }
+    .profile .intro {
+        margin: 0;
+        margin-left: 10%;
+        padding: 0;
+        max-width: 100%;
+    }
+    .profile .intro h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .intro .designation {
+        margin: 0;
+        padding: 10px;
+        font-size: 1.2rem;
+        width: 80%;
+        text-align: center;
+    }
+    .btns-container {
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .btns-container button {
+        width:160px;
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 1024px) and (min-width: 801px) {
+    .profile {
+        margin-top: 150px;
+        height: 85vh;
+    }
+    .profile .pic-container img{
+        width: 500px;
+        height: 500px;
+        padding: 0;
+        margin-left: 0;
+    }
+    .profile .intro h1 {
+        font-size: 1.5rem;
+        text-align: start;
+    }
+    .intro .designation {
+        margin: 0;
+        padding: 10px;
+        font-size: 2rem;
+        width: 100%;
+        text-align: start;
+    }
+}
+
+  

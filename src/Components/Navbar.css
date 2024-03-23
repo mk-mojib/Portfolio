@@ -1,44 +1,205 @@
-/* Navbar.css */
-.navbar {
+/* Navbar */
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px #000;
+    z-index: 1000;
+}
+
+nav, .nav-links{
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+.navbar .logo {
+    color: #8a2be2;
+    font-weight: 900;
+}
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+    margin: 0; 
+    padding: 0; 
+}
+
+.nav-links li {
+    margin-right: 2rem; 
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    position: relative;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px; 
   width: 100%;
-  padding: 15px 0;
-  background-color: #8F12FD;
-  transition: background-color 0.3s ease-in-out;
+  height: 2px;
+  background-color: transparent; 
+  transform: scaleX(0); 
+  transform-origin: left; 
+  transition: transform 0.3s ease-out; 
 }
 
-
-.navbar.scrolled {
-  background-color: #8F12FD; /* Change the background color when scrolled if needed */
+a:hover::after {
+    background-color: #8a2be2;
+    width: 50%;
+    transform: scaleX(1); 
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.active a::after {
+    transform: scaleX(1); 
 }
 
 .logo {
-  font-size: 1.5rem;
+    font-size: 2rem;
 }
 
-.nav-list {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+.logo:hover {
+    cursor: default;
 }
 
-.nav-link {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 20px;
-  margin: 0 10px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
+/* Hamburger Menu */ 
+
+.hamburger-nav {
+    display: none;
 }
 
-.nav-link:hover,
-.nav-link.active {
-  color: #ffc107; /* Change the color on hover or when the link is active */
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
 }
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: #8a2be2;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    padding: 0 0 10px 0;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4 ease-in-out;
+
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px 10px 5px 0;
+    text-align: left;
+    font-size: 1.5rem;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.4 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+    width: 100%;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+opacity: 0;}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+.hamburger-menu .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1100px) {
+    .navbar {
+        display: none;
+    }
+    
+    .hamburger-nav .logo {
+        color: #8a2be2;
+        font-weight: 900;
+    }
+    
+    .hamburger-nav .menu {
+        color: #8a2be2
+    }
+    
+    .hamburger-nav {
+        display: flex;  
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav-container {
+        padding-left: 0;
+    }
+    .hamburger-nav .logo {
+        font-size: 1.5rem;
+
+    }
+    .hamburger-nav .menu {
+        font-size: 1rem;
+        padding-top: 12px;
+        margin-right: 20px;
+    }
+    .hamburger-nav .menu-links {
+        color: #8a2be2;
+        background: #fff;
+    }
+      
+}
+

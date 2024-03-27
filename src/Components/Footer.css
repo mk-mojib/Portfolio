@@ -3,7 +3,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: 10px 0 10px 0;
-    background-color: #a863e4;
+    background-color: rgba(98, 1, 255, 0.9);
     color: #fff;
   }
   .last-section {
@@ -28,4 +28,5 @@ footer {
     color: #007bff;
     background-color: #fff;
   }
+
   

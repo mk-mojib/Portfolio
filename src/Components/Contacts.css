@@ -1,53 +1,180 @@
-/* Constacts */
+/* Contacts.css */
 
 #contact {
     margin-top: 150px;
     height: 80vh;
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.contact {
+    margin-left: 5%;
 }
 
-#contact h2 {
-    text-align: center;
-    font-size: 2.1rem;
-    padding-top: 2%;
+.contact .contact-title {
+    padding: 20px;
+}
+  
+.contact-title h2 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1px;
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    color: #aaaaaa;
+    text-transform: uppercase;
 }
 
-#contact h2 b{
+.contact-title h2 b {
     color: #8A2BE2;
 }
 
-#contact p {
-    text-align: center;
-    font-size: 1.1rem;
+.contact-title h2::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    display: inline-block;
+    background: #1acc8d;
+    margin: 4px 10px;
 }
 
-form {
-    max-width: 500px;
-    margin: 5px auto;
+.contact-title p {
+    margin: 15px 0 5px 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #010483;
+}
+
+.contact-title h5 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.contact-info {
+    flex: 1; 
 }
   
+  .info {
+    margin-left: 15px;
+  }
+  
+.info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #0205a1;
+  }
+  
+.info .email,
+ .info .phone,
+ .info .address {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+ 
+.info h4 {
+    font-size: 22px;
+    margin-right: 10px;
+    color: #010483;
+}
+.info p {
+    margin-top: 5px;
+    padding: 0;
+    color: #0205a1;
+}
+  
+.icon-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    background-color: #f0f0ff; 
+    margin-right: 10px; 
+}
+
+.info .email:hover .icon-container,
+.info .address:hover .icon-container,
+.info .phone:hover .icon-container {
+  background: #1acc8d;
+  color: #fff;
+}
+  
+
+.form-container {
+    margin-top: 15%;
+    box-sizing: border-box;
+}
+  
+form {
+    margin: 0 auto; 
+    max-width: 80%; 
+}
+
+form .name-email {
+    display: flex;
+    gap: 2%;
+}
+
+form .name-email .your-name,
+form .name-email .your-email {
+  flex: 1;
+}
+
+form .your-subject input{
+    width: 100%;
+}
+
+form .name-email .your-name input,
+form .name-email .your-email input {
+  width: calc(100%);
+}
+
+form .your-email input {
+    margin-right: 0;
+    padding-right: 0;
+}
+
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
   
-input,
+input {
+    height: 50px;
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
 textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     box-sizing: border-box;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    min-height: 200px;
 }
-  
+
+form button {
+    margin-left: 40%;
+}
+
 button {
     font-size: 1rem;
-    font-weight: 600;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    background-color: #8A2BE2;
+    border-radius: 35px;
+    width: auto;
+    background-color: #1acc8d;
     color: #fff;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
@@ -55,99 +182,210 @@ button {
   
 button:hover {
     transform: scale(1.1);
-
 }
-
+  
 button:active {
     color: #fff;
     background-color: #000;
     font-weight: 530;
 }
 
-/* Media Query */
+/* Media Query */ 
 
 @media only screen and (max-width: 600px) and (min-width: 370px) {
     #contact {
-        margin-top: 150px;
-        height: 60vh;
+        height: 100vh;
+        margin-bottom: 100px;
     }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+      }
     
-    #contact h2 {
-        text-align: center;
-        font-size: 2.1rem;
-        padding-top: 2%;
+    .contact {
+        margin-left: 8%;
     }
-    
-    #contact h2 b{
-        color: #8A2BE2;
+
+    .contact .contact-title {
+        padding-bottom: 0;
     }
-    
-    #contact p {
-        text-align: center;
-        font-size: 1.1rem;
+      
+    .form-container {
+        margin-top: 5%;
+        box-sizing: border-box;
     }
-    
+
     form {
-        max-width: 300px;
-        margin: 5px auto;
+        margin: 0 auto; 
+        max-width: 80%; 
     }
     
+    form .name-email {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    form .name-email .your-name,
+    form .name-email .your-email {
+        flex-basis: 100%;
+    }
+    
+    form .your-subject input{
+        width: 100%;
+    }
+    
+    form .name-email .your-name input,
+    form .name-email .your-email input {
+        flex-basis: calc(50% - 5px);
+    }
+    
+    form .your-email input {
+        margin-right: 0;
+        padding-right: 0;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+      
+    input {
+        height: 40px;
+        font-size: 12px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+
+    form button {
+
+        margin-left: 25%;
+    }
 }
 
-@media only screen and (max-width: 800px) and (min-width: 601px) {
+@media only screen and (max-width: 768px) and (min-width: 601px) {
     #contact {
-        margin-top: 150px;
-        height: 80vh;
-        margin-bottom: 0;
+        height: 100vh;
+        margin-bottom: 100px;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
     }
     
-    #contact h2 {
-        text-align: center;
-        font-size: 2.1rem;
-        padding-top: 2%;
+    .contact {
+        margin-left: 8%;
     }
-    
-    #contact h2 b{
-        color: #8A2BE2;
+
+    .contact .contact-title {
+        padding-bottom: 0;
     }
-    
-    #contact p {
-        text-align: center;
-        font-size: 1.5rem;
+      
+    .form-container {
+        margin-top: 5%;
+        box-sizing: border-box;
     }
-    
+
     form {
-        max-width: 500px;
-        margin: 5px auto;
+        margin: 0 auto; 
+        max-width: 80%; 
     }
     
+    form .name-email {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    form .name-email .your-name,
+    form .name-email .your-email {
+        flex-basis: 100%;
+    }
+    
+    form .your-subject input{
+        width: 100%;
+    }
+    
+    form .name-email .your-name input,
+    form .name-email .your-email input {
+        flex-basis: calc(50% - 5px);
+    }
+    
+    form .your-email input {
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    textarea {
+        min-height: 150px;
+    }
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 801px) {
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
     #contact {
-        margin-top: 250px;
-        height: 80vh;
-        margin-bottom: 0;
+        height: 100vh;
+        margin-bottom: 100px;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
     }
     
-    #contact h2 {
-        text-align: center;
-        font-size: 2.1rem;
-        padding-top: 2%;
+    .contact {
+        margin-left: 8%;
     }
-    
-    #contact h2 b{
-        color: #8A2BE2;
+
+    .contact .contact-title {
+        padding-bottom: 0;
     }
-    
-    #contact p {
-        text-align: center;
-        font-size: 1.5rem;
+      
+    .form-container {
+        margin-top: 5%;
+        box-sizing: border-box;
     }
-    
+
     form {
-        max-width: 600px;
-        margin: 5px auto;
+        margin: 0 auto; 
+        max-width: 80%; 
     }
     
+    form .name-email {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    form .name-email .your-name,
+    form .name-email .your-email {
+        flex-basis: 100%;
+    }
+    
+    form .your-subject input{
+        width: 100%;
+    }
+    
+    form .name-email .your-name input,
+    form .name-email .your-email input {
+        flex-basis: calc(50% - 5px);
+    }
+    
+    form .your-email input {
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    textarea {
+        min-height: 150px;
+    }  
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+    .form-container {
+        margin-top: 20%;
+    }
 }

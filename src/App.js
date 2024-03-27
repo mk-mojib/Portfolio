@@ -8,7 +8,7 @@ import Skills from "./Components/Skills"
 import Projects from "./Components/Projects"
 import Contacts from "./Components/Contacts"
 import Footer from './Components/Footer';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -33,6 +33,7 @@ function App() {
           <Route path='/skills' element={<Skills />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/contacts' element={<Contacts />} />
+          <Route path='*' element={<Navigate to="/" />} />
       </Routes>
       <Footer />
       </div>

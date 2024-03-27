@@ -55,14 +55,6 @@ const Navbar = () => {
                 </div>
             </div>
                 <div className={`menu-links ${isMenuOpen ? 'open' : ''}`} >
-                    {/* <ul>
-                        <li onClick={() => {setMenu("home"), toggleMenu}}><Link to="/">Home</Link></li>
-                        <li onClick={() => {setMenu("about"),toggleMenu}}><Link to="/about">About</Link></li>
-                        <li onClick={() => {setMenu("education"),toggleMenu}}><Link to="/education">Education</Link></li>
-                        <li onClick={() => {setMenu("skills"),toggleMenu}}><Link to="/skills">Skills</Link></li>
-                        <li onClick={() => {setMenu("projects"),toggleMenu}}><Link to="/projects">Projects</Link></li>
-                        <li onClick={() => {setMenu("contacts"),toggleMenu}}><Link to="/contacts">Contacts</Link></li>
-                    </ul>     */}
                       <ul>
                           <li onClick={() => { setMenu("home"); setIsMenuOpen(false); }}><Link to="/">Home</Link></li>
                           <li onClick={() => { setMenu("about"); setIsMenuOpen(false); }}><Link to="/about">About</Link></li>
@@ -79,6 +71,8 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
 
 
 

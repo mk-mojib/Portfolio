@@ -17,7 +17,8 @@ const Footer = () => {
           <FaGithub />
         </a>
       </div>
-      <p>&copy; 2024 Md Khalid Mojib. All rights reserved.</p>
+      <p>&copy; Copyright <b>Md Khalid Mojib.</b> All Rights Reserved</p>
+      <p>Designed by <span style={{ color: '#1acc8d' }}>Md Khalid Mojib</span></p>
     </footer>
   );
 };

@@ -36,6 +36,10 @@ nav {
     margin-right: 2rem; 
 }
 
+.nav-links li:hover {
+    color: #007bff;
+}
+
 a {
     color: #fff;
     text-decoration: none;

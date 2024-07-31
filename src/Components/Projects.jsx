@@ -37,7 +37,27 @@ const Projects = () => {
             <div className="project-card">
                 <div className="card-content">
                     <div className="card-image">
-                        <img src={project2} alt="project 1" className='project-img' />
+                        <img src={project2} alt="project 2" className='project-img' />
+                    </div>
+                    <div className="card-details">
+                        <h2 className='project-title'>Notes App</h2>
+                        <p>The Note App is a web application designed to help users create, update, delete, and search notes efficiently. It features a user-friendly interface and leverages local storage for data persistence.
+                        </p>
+                        <div className="btn-container">
+                            <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://github.com/mk-mojib/", "_blank")}>
+                                GitHub
+                            </button>
+                            <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://main--mk-notes.netlify.app/", "_blank")}>
+                                Live Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="project-card">
+                <div className="card-content">
+                    <div className="card-image">
+                        <img src={project3} alt="project 3" className='project-img' />
                     </div>
                     <div className="card-details">
                         <h2 className='project-title'>Moshop</h2>
@@ -57,7 +77,7 @@ const Projects = () => {
             <div className="project-card">
                 <div className="card-content">
                     <div className="card-image">
-                        <img src={project3} alt="project 1" className='project-img' />
+                        <img src={project4} alt="project 4" className='project-img' />
                     </div>
                     <div className="card-details">
                         <h2 className='project-title'>Star Wars Planets Directory</h2>
@@ -77,7 +97,7 @@ const Projects = () => {
             <div className="project-card">
                 <div className="card-content">
                     <div className="card-image">
-                        <img src={project4} alt="project 1" className='project-img' />
+                        <img src={project5} alt="project 5" className='project-img' />
                     </div>
                     <div className="card-details">
                         <h2 className='project-title'>Amazon Clone | Home Page</h2>
@@ -94,29 +114,8 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-            <div className="project-card">
-                <div className="card-content">
-                    <div className="card-image">
-                        <img src={project5} alt="project 1" className='project-img' />
-                    </div>
-                    <div className="card-details">
-                        <h2 className='project-title'>Spotify Clone | Home Page</h2>
-                        <p>Creating a Spotify music website clone using HTML and CSS allows you to replicate some key features of the popular music streaming platform.
-                        </p>
-                        <div className="btn-container">
-                            <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://github.com/mk-mojib/", "_blank")}>
-                                GitHub
-                            </button>
-                            <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://mk-mojib.github.io/spotify-clone/", "_blank")}>
-                                Live Demo
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
-    {/* <Contacts /> */}
     </div>
   );
 }

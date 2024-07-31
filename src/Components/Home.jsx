@@ -30,7 +30,7 @@ const Home = () => {
               <button className='btns' onClick={() => window.open("https://github.com/mk-mojib/", "_blank")}>
                   GitHub
               </button>
-              <button onClick={() => window.open("https://drive.google.com/file/d/1Fa06x2LapXNME6kepo6KemZnpNqjpG9i/view?usp=sharing", "_blank")}>
+              <button onClick={() => window.open("https://drive.google.com/file/d/1jYVCysdz62ZdRauwIeYATaP-idy5EeKa/view?usp=sharing", "_blank")}>
                   Download CV
               </button>
             </div>

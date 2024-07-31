@@ -24,7 +24,7 @@ const Projects = () => {
                         <p>Wanderlust is a web application that allows users to share and explore unique accommodations around the world. Whether it's a cozy home, a luxurious hotel room, or a charming cottage, Wanderlust provides a platform for users to showcase their properties and connect with like-minded travelers.
                         </p>
                         <div className="btn-container">
-                            <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://github.com/mk-mojib/", "_blank")}>
+                            <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://github.com/mk-mojib/wanderlust", "_blank")}>
                                 GitHub
                             </button>
                             <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://wanderlust-z0de.onrender.com/listings", "_blank")}>
@@ -44,7 +44,7 @@ const Projects = () => {
                         <p>The Note App is a web application designed to help users create, update, delete, and search notes efficiently. It features a user-friendly interface and leverages local storage for data persistence.
                         </p>
                         <div className="btn-container">
-                            <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://github.com/mk-mojib/", "_blank")}>
+                            <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://github.com/mk-mojib/Notes-App", "_blank")}>
                                 GitHub
                             </button>
                             <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://main--mk-notes.netlify.app/", "_blank")}>
@@ -64,7 +64,7 @@ const Projects = () => {
                         <p>At Moshop, we redefine online shopping, offering a curated collection of the latest trends in men's, women's, and kids' garments. We pride ourselves on being your go-to destination for stylish and affordable fashion.
                         </p>
                         <div className="btn-container">
-                            <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://github.com/mk-mojib/", "_blank")}>
+                            <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://github.com/mk-mojib/ecommerce-react-app", "_blank")}>
                                 GitHub
                             </button>
                             <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://mk-mojib.github.io/ecommerce-react-app/", "_blank")}>
@@ -84,7 +84,7 @@ const Projects = () => {
                         <p>Welcome to the Star Wars Planets Explorer, a captivating React web application crafted to showcase the awe-inspiring planets from the Star Wars universe. Leveraging the power of the Star Wars API (SWAPI), this project goes beyond the ordinary, not only providing detailed information about each celestial body but also unveiling the notable residents that call these planets home.
                         </p>
                         <div className="btn-container">
-                            <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://github.com/mk-mojib/", "_blank")}>
+                            <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://github.com/mk-mojib/star-wars-planets", "_blank")}>
                                 GitHub
                             </button>
                             <button className='btn btn-color-2 project-btn' onClick={() => window.open("https://mk-mojib.github.io/star-wars-planets/", "_blank")}>

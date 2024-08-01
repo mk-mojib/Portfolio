@@ -12,7 +12,7 @@ const Education = () => {
             <h3>B-Tech in Computer Science</h3>
             <p>Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal - MP.</p>
             <p>Year: 2021 - 2024</p>
-            <p>CGPA: 7.56</p>
+            <p>CGPA: 7.53</p>
           </div>
           <div className="education-item">
             <h3>Diploma in Computer Science & Engineering</h3>

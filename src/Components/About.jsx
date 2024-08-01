@@ -20,9 +20,9 @@ function About() {
                 Hi Everyone, I am <span className="purple">Md Khalid Mojib </span>
                 from <span className="purple"> Bihar, India.</span>
             <br />
-                Aspiring software engineer seeking an Internship
+                Aspiring software engineer seeking an Internship.
             <br />
-                I am pursuing B - Tech (FY) in Computer Science from RGPV MP.
+                I have completed my B - Tech in C.S.E from RGPV - MP.
             <br />
             <br />
                  Apart from coding, some other activities that I love to do!

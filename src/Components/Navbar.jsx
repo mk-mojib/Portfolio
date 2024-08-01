@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isTransparent, setIsTransparent] = useState(true);
+    // eslint-disable-next-line
     const [menu, setMenu] = useState("home");
 
     const toggleMenu = () => {

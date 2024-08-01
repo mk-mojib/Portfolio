@@ -1,6 +1,11 @@
-# Md Khalid Mojib Portfolio
+# Md Khalid Mojib - Portfolio 
 
-Welcome to my portfolio! This repository showcases a collection of my projects, skills, and experiences. Here, you'll find details about the work I've done, the technologies I use, and how you can get in touch with me.
+Welcome to my portfolio! This repository showcases a collection of my projects, skills, and experiences. Here, you'll find details about the work I've done, the technologies I use, and how you can get in touch with me. 
+
+## View Portfolio
+
+You can view the live version of my portfolio [here](https://mk-my-portfolio.netlify.app/).
+
 
 ## Table of Contents
 - [Home](#home)
@@ -12,7 +17,7 @@ Welcome to my portfolio! This repository showcases a collection of my projects, 
 
 ## About Me
 
-Hi, I'm Md Khalid Mojib, a Front-end developer with a passion for Software Engineer. I specialize in HTML, CSS, JavaScript and MERN Stack. With a background in Web Development, I enjoy working on unique projects.
+Hi, I'm Md Khalid Mojib, a Front-end Developer with a passion for Software Engineering. I specialize in HTML, CSS, JavaScript, and the MERN stack. With a strong background in web development, I enjoy working on unique and challenging projects.
 
 ## Project Structure
 

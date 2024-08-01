@@ -27,7 +27,7 @@ const Home = () => {
             </div>
             </h1>
             <div className="btns-container">
-              <button className='btns' onClick={() => window.open("https://github.com/mk-mojib/", "_blank")}>
+              <button className='btns' onClick={() => window.open("https://github.com/mk-mojib/Portfolio", "_blank")}>
                   GitHub
               </button>
               <button onClick={() => window.open("https://drive.google.com/file/d/1jYVCysdz62ZdRauwIeYATaP-idy5EeKa/view?usp=sharing", "_blank")}>
